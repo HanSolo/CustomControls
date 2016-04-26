@@ -10,14 +10,10 @@ import javafx.stage.Stage;
 
 public class Demo extends Application {
 
-    private Led control;
-
-    @Override public void init() {
-        control = new Led();
-        control.setPrefSize(200, 200);
-    }
-
     @Override public void start(Stage stage) {
+        Led control = new Led();
+        control.setPrefSize(200, 200);
+
         StackPane pane = new StackPane();
         pane.getChildren().setAll(control);
 
